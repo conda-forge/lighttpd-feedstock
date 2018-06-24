@@ -28,27 +28,28 @@ build:
 
 requirements:
   build:
-    - toolchain
     - pkg-config
     - libtool
-    - zlib 1.2.11
-    - bzip2 1.0.*
+    - perl  # Needed to run the tests
+    - {{ compiler('c') }}
+  host:
+    - zlib
+    - bzip2
     - pcre 8.39*
-    - krb5 1.14.*
-    - openssl 1.0.*
-    - libxml2 2.9.*
-    - sqlite 3.13.*
+    - krb5
+    - openssl
+    - libxml2
+    - sqlite
     - libuuid
     - mysql
-    - perl  # Needed to run the tests
   run:
-    - zlib 1.2.11
-    - bzip2 1.0.*
+    - zlib
+    - bzip2
     - pcre 8.39*
-    - krb5 1.14.*
-    - openssl 1.0.*
-    - libxml2 2.9.*
-    - sqlite 3.13.*
+    - krb5
+    - openssl
+    - libxml2
+    - sqlite
     - libuuid
 
 test:
