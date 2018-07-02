@@ -10,8 +10,8 @@
 #  - https://redmine.lighttpd.net/projects/lighttpd/wiki/OptionalLibraries
 #
 
-{% set version = "1.4.48" %}
-{% set build_number= "0" %}
+{% set version = "1.4.49" %}
+{% set build_number = "0" %}
 
 package:
   name: lighttpd
@@ -20,7 +20,7 @@ package:
 source:
   fn: lighttpd-{{ version }}.tar.gz
   url: http://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-{{ version }}.tar.gz
-  sha256: fc36f82877284eb506356aa80f483f133a9e17ec7cb79acd7e5b7733768538ef
+  sha256: 8b744baf9f29c386fff1a6d2e435491e726cb8d29cfdb1fe20ab782ee2fc2ac7
 
 build:
   number: {{ build_number }}
@@ -28,27 +28,28 @@ build:
 
 requirements:
   build:
-    - toolchain
     - pkg-config
     - libtool
-    - zlib 1.2.11
-    - bzip2 1.0.*
+    - perl  # Needed to run the tests
+    - {{ compiler('c') }}
+  host:
+    - zlib
+    - bzip2
     - pcre 8.39*
-    - krb5 1.14.*
-    - openssl 1.0.*
-    - libxml2 2.9.*
-    - sqlite 3.13.*
+    - krb5
+    - openssl
+    - libxml2
+    - sqlite
     - libuuid
     - mysql
-    - perl  # Needed to run the tests
   run:
-    - zlib 1.2.11
-    - bzip2 1.0.*
+    - zlib
+    - bzip2
     - pcre 8.39*
-    - krb5 1.14.*
-    - openssl 1.0.*
-    - libxml2 2.9.*
-    - sqlite 3.13.*
+    - krb5
+    - openssl
+    - libxml2
+    - sqlite
     - libuuid
 
 test:
