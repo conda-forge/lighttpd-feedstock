@@ -11,7 +11,7 @@
 #
 
 {% set version = "1.4.48" %}
-{% set build_number= "0" %}
+{% set build_number = "0" %}
 
 package:
   name: lighttpd
