@@ -1,29 +1,16 @@
-#
-# Inspired in the original defaults recipe at:
-#   https://github.com/ContinuumIO/anaconda-recipes/tree/master/lighttpd
-#
-# This updates to newer versins, builds with bzip2 and pcre support and
-# includes a more comprehensive example of MIME config.
-#
-# See also:
-#  - https://redmine.lighttpd.net/projects/lighttpd/wiki/InstallFromSource
-#  - https://redmine.lighttpd.net/projects/lighttpd/wiki/OptionalLibraries
-#
-
-{% set version = "1.4.49" %}
-{% set build_number = "0" %}
+{% set major_minor = "1.4" %}
+{% set version = major_minor + ".49" %}
 
 package:
   name: lighttpd
   version: {{ version }}
 
 source:
-  fn: lighttpd-{{ version }}.tar.gz
-  url: http://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-{{ version }}.tar.gz
+  url: http://download.lighttpd.net/lighttpd/releases-{{ major_minor }}.x/lighttpd-{{ version }}.tar.gz
   sha256: 8b744baf9f29c386fff1a6d2e435491e726cb8d29cfdb1fe20ab782ee2fc2ac7
 
 build:
-  number: {{ build_number }}
+  number: 1
   skip: True  # [not linux]
 
 requirements:
