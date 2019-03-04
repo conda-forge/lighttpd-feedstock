@@ -22,7 +22,7 @@ requirements:
   host:
     - zlib
     - bzip2
-    - pcre 8.39*
+    - pcre
     - krb5
     - openssl
     - libxml2
@@ -32,7 +32,7 @@ requirements:
   run:
     - zlib
     - bzip2
-    - pcre 8.39*
+    - pcre
     - krb5
     - openssl
     - libxml2
