@@ -19,6 +19,7 @@ requirements:
     - libtool
     - perl  # Needed to run the tests
     - {{ compiler('c') }}
+    - make  # [unix]
   host:
     - zlib
     - bzip2
