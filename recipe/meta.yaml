@@ -10,7 +10,7 @@ source:
   sha256: 8b744baf9f29c386fff1a6d2e435491e726cb8d29cfdb1fe20ab782ee2fc2ac7
 
 build:
-  number: 1002
+  number: 1003
   skip: True  # [not linux]
 
 requirements:
@@ -24,7 +24,7 @@ requirements:
   host:
     - zlib
     - bzip2
-    - pcre 8.39*
+    - pcre
     - krb5
     - openssl
     - libxml2
@@ -34,7 +34,7 @@ requirements:
   run:
     - zlib
     - bzip2
-    - pcre 8.39*
+    - pcre
     - krb5
     - openssl
     - libxml2

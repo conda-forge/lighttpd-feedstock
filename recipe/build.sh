@@ -7,10 +7,11 @@ ln -s $CXX $BUILD_PREFIX/bin/g++
     --with-sysroot=$PREFIX \
     --prefix=$PREFIX \
     --with-webdav-props \
-		--with-webdav-locks \
+    --with-webdav-locks \
     --with-krb5 \
     --with-mysql \
-    --with-openssl
+    --with-openssl || \
+    { cat config.log; exit 1; }
 #
 # For a more complete configuration, the arch package is a great example:
 # https://git.archlinux.org/svntogit/packages.git/tree/trunk/PKGBUILD?h=packages/lighttpd
