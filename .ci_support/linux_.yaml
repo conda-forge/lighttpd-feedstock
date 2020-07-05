@@ -15,15 +15,15 @@ cxx_compiler_version:
 docker_image:
 - condaforge/linux-anvil-comp7
 krb5:
-- '1.16'
+- 1.17.1
 libuuid:
 - 2.32.1
 libxml2:
 - '2.9'
 openssl:
-- 1.1.1a
+- 1.1.1
 perl:
-- '5.26'
+- 5.26.2
 pin_run_as_build:
   bzip2:
     max_pin: x
