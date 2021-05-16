@@ -3,7 +3,7 @@ About lighttpd
 
 Home: http://www.lighttpd.net/
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lighttpd-feedstock/blob/master/LICENSE.txt)
 
@@ -66,6 +66,7 @@ Installing `lighttpd` from the `conda-forge` channel can be achieved by adding `
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `lighttpd` can be installed with:
