@@ -3,7 +3,7 @@ About lighttpd
 
 Home: http://www.lighttpd.net/
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lighttpd-feedstock/blob/master/LICENSE.txt)
 
