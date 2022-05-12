@@ -17,6 +17,8 @@ ln -s $CXX $BUILD_PREFIX/bin/g++
     --with-gnutls \
     --with-libxml \
     --with-ldap \
+    --with-lua \
+    --with-brotli \
     --with-openssl || \
     { cat config.log; exit 1; }
 #

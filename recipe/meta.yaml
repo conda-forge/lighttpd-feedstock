@@ -42,6 +42,8 @@ requirements:
     - bzip2
     - nettle
     - keyutils
+    - lua
+    - brotli
   run:
     - bzip2
     - pcre2
@@ -51,6 +53,7 @@ requirements:
     - sqlite
     - libuuid
     - keyutils
+    - lua
 
 test:
   files:
