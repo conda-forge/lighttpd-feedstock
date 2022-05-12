@@ -1,5 +1,5 @@
 {% set major_minor = "1.4" %}
-{% set version = major_minor + ".53" %}
+{% set version = major_minor + ".64" %}
 
 package:
   name: lighttpd
@@ -7,10 +7,10 @@ package:
 
 source:
   url: http://download.lighttpd.net/lighttpd/releases-{{ major_minor }}.x/lighttpd-{{ version }}.tar.gz
-  sha256: 423b3951f212e3a30511eb86f4662a1848c6e857074289ff23fc310eef520266
+  sha256: 71e46403fb28371a06b23ef1cceffd75285140c6f62a879c777ee5af0d248801
 
 build:
-  number: 3
+  number: 0
   skip: True  # [not linux]
 
 requirements:
@@ -67,3 +67,5 @@ about:
 extra:
   recipe-maintainers:
     - sdvillal
+    - notestaff
+
