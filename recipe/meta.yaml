@@ -41,16 +41,16 @@ requirements:
     - openldap
     - bzip2
     - nettle
+    - keyutils
   run:
-    - zlib
     - bzip2
-    - pcre
     - pcre2
     - krb5
     - openssl
     - libxml2
     - sqlite
     - libuuid
+    - keyutils
 
 test:
   files:
