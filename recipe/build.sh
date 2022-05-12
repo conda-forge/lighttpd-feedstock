@@ -11,6 +11,11 @@ ln -s $CXX $BUILD_PREFIX/bin/g++
     --with-webdav-locks \
     --with-krb5 \
     --with-mysql \
+    --with-nettle \
+    --with-bzip2 \
+    --with-zlib \
+    --with-gnutls \
+    --with-libxml \
     --with-openssl || \
     { cat config.log; exit 1; }
 #

@@ -38,6 +38,9 @@ requirements:
     - libuuid
     - mysql
     - gnutls
+    - ldap3
+    - bzip2
+    - nettle
   run:
     - zlib
     - bzip2
