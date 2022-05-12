@@ -26,16 +26,19 @@ requirements:
     - zlib
     - bzip2
     - pcre
+    - pcre2
     - krb5
     - openssl
     - libxml2
     - sqlite
     - libuuid
     - mysql
+    - gnutls
   run:
     - zlib
     - bzip2
     - pcre
+    - pcre2
     - krb5
     - openssl
     - libxml2
