@@ -16,6 +16,7 @@ ln -s $CXX $BUILD_PREFIX/bin/g++
     --with-zlib \
     --with-gnutls \
     --with-libxml \
+    --with-ldap \
     --with-openssl || \
     { cat config.log; exit 1; }
 #
