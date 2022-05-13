@@ -20,6 +20,7 @@ requirements:
     - perl  # Needed to run the tests
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - sysroot_linux-64 2.17  # [linux64]
     - make
     - automake
     - autoconf
@@ -37,7 +38,7 @@ requirements:
     - libuuid
     - mysql
     - mysql-libs
-    - gnutls
+    - gnutls>=3.6.15
     - openldap
     - bzip2
     - nettle
