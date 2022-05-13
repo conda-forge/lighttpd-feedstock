@@ -37,7 +37,6 @@ requirements:
     - sqlite
     - libuuid
     - mysql
-    - mysql-libs
     - gnutls
     - openldap
     - bzip2
@@ -45,7 +44,6 @@ requirements:
     - keyutils
     - lua
     - brotli
-    - libedit
   run:
     - bzip2
     - pcre2
