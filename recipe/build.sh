@@ -3,6 +3,7 @@
 ln -s $CC $BUILD_PREFIX/bin/gcc
 ln -s $CXX $BUILD_PREFIX/bin/g++
 
+./autogen.sh
 ./configure \
     --with-sysroot=$PREFIX \
     --prefix=$PREFIX \
@@ -10,6 +11,14 @@ ln -s $CXX $BUILD_PREFIX/bin/g++
     --with-webdav-locks \
     --with-krb5 \
     --with-mysql \
+    --with-nettle \
+    --with-bzip2 \
+    --with-zlib \
+    --with-gnutls \
+    --with-libxml \
+    --with-ldap \
+    --with-lua \
+    --with-brotli \
     --with-openssl || \
     { cat config.log; exit 1; }
 #

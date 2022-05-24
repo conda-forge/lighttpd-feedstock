@@ -1,5 +1,5 @@
 {% set major_minor = "1.4" %}
-{% set version = major_minor + ".53" %}
+{% set version = major_minor + ".64" %}
 
 package:
   name: lighttpd
@@ -7,10 +7,10 @@ package:
 
 source:
   url: http://download.lighttpd.net/lighttpd/releases-{{ major_minor }}.x/lighttpd-{{ version }}.tar.gz
-  sha256: 423b3951f212e3a30511eb86f4662a1848c6e857074289ff23fc310eef520266
+  sha256: 71e46403fb28371a06b23ef1cceffd75285140c6f62a879c777ee5af0d248801
 
 build:
-  number: 3
+  number: 0
   skip: True  # [not linux]
 
 requirements:
@@ -20,26 +20,40 @@ requirements:
     - perl  # Needed to run the tests
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - sysroot_linux-64 2.17  # [linux64]
     - make
+    - automake
+    - autoconf
+    - libtool
+    - m4
   host:
     - zlib
     - bzip2
     - pcre
+    - pcre2
     - krb5
     - openssl
     - libxml2
     - sqlite
     - libuuid
     - mysql
-  run:
-    - zlib
+    - gnutls
+    - openldap
     - bzip2
-    - pcre
+    - nettle
+    - keyutils
+    - lua
+    - brotli
+  run:
+    - bzip2
+    - pcre2
     - krb5
     - openssl
     - libxml2
     - sqlite
     - libuuid
+    - keyutils
+    - lua
 
 test:
   files:
@@ -67,3 +81,4 @@ about:
 extra:
   recipe-maintainers:
     - sdvillal
+    - notestaff
