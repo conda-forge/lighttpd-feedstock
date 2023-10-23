@@ -20,6 +20,8 @@ gnutls:
 - '3.7'
 krb5:
 - '1.21'
+libdeflate:
+- '1.19'
 libuuid:
 - '2'
 libxml2:
