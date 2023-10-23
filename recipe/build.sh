@@ -19,7 +19,9 @@ ln -s $CXX $BUILD_PREFIX/bin/g++
     --with-ldap \
     --with-lua \
     --with-brotli \
-    --with-openssl || \
+    --with-openssl \
+    --with-zstd \
+    --with-libdeflate || \
     { cat config.log; exit 1; }
 #
 # For a more complete configuration, the arch package is a great example:
