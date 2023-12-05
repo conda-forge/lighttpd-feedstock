@@ -45,3 +45,4 @@ make install
 
 rm -rf $PREFIX/bin
 mv $PREFIX/sbin $PREFIX/bin
+
