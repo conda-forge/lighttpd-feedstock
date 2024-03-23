@@ -21,15 +21,15 @@ gnutls:
 krb5:
 - '1.21'
 libdeflate:
-- '1.19'
+- '1.20'
 libuuid:
 - '2'
 libxml2:
-- '2.11'
+- '2'
 lua:
 - '5'
 nettle:
-- '3.8'
+- '3.9'
 openssl:
 - '3'
 pcre:
