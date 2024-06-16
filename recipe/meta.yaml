@@ -10,7 +10,7 @@ source:
   sha256: 816cbec71e8d02d874f1d5c798d76d091a76d5acbeb6e017ba76aeb4263d6995
 
 build:
-  number: 3
+  number: 4
   skip: True  # [not linux]
 
 requirements:
@@ -19,8 +19,8 @@ requirements:
     - libtool
     - perl  # Needed to run the tests
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - sysroot_linux-64 2.17  # [linux64]
     - make
     - automake
     - autoconf
