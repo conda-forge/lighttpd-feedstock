@@ -19,7 +19,7 @@ requirements:
     - libtool
     - perl  # Needed to run the tests
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - make
     - automake
