@@ -29,7 +29,7 @@ libdeflate:
 libuuid:
 - '2'
 libxml2:
-- '2'
+- '2.13'
 lua:
 - '5'
 nettle:
@@ -39,7 +39,7 @@ openssl:
 pcre:
 - '8'
 pcre2:
-- '10.44'
+- '10.45'
 perl:
 - 5.32.1
 sqlite:
