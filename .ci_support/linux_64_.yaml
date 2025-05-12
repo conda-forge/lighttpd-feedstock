@@ -25,11 +25,11 @@ gnutls:
 krb5:
 - '1.21'
 libdeflate:
-- '1.23'
+- '1.24'
 libuuid:
 - '2'
 libxml2:
-- '2'
+- '2.13'
 lua:
 - '5'
 nettle:
