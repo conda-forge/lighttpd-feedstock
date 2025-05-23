@@ -25,21 +25,21 @@ gnutls:
 krb5:
 - '1.21'
 libdeflate:
-- '1.23'
+- '1.24'
 libuuid:
 - '2'
 libxml2:
-- '2'
+- '2.13'
 lua:
 - '5'
 nettle:
-- '3.9'
+- '3.10'
 openssl:
 - '3'
 pcre:
 - '8'
 pcre2:
-- '10.44'
+- '10.45'
 perl:
 - 5.32.1
 sqlite:
