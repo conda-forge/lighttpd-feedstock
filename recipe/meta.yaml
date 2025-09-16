@@ -10,7 +10,7 @@ source:
   sha256: 816cbec71e8d02d874f1d5c798d76d091a76d5acbeb6e017ba76aeb4263d6995
 
 build:
-  number: 6
+  number: 7
   skip: True  # [not linux]
 
 requirements:
@@ -33,7 +33,7 @@ requirements:
     - pcre2
     - krb5
     - openssl
-    - libxml2
+    - libxml2-devel
     - sqlite
     - libuuid
     - mysql
@@ -51,7 +51,7 @@ requirements:
     - pcre2
     - krb5
     - openssl
-    - libxml2
+    - libxml2-devel
     - sqlite
     - libuuid
     - keyutils
