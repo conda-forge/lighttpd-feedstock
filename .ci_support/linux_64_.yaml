@@ -28,8 +28,8 @@ libdeflate:
 - '1.25'
 libuuid:
 - '2'
-libxml2:
-- '2.13'
+libxml2_devel:
+- '2.14'
 lua:
 - '5'
 nettle:
