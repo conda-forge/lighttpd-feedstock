@@ -23,7 +23,7 @@ docker_image:
 gnutls:
 - '3.8'
 krb5:
-- '1.21'
+- '1.22'
 libdeflate:
 - '1.25'
 libuuid:
