@@ -1,26 +1,29 @@
-{% set major_minor = "1.4" %}
-{% set version = major_minor + ".73" %}
+schema_version: 1
+
+context:
+  major_minor: "1.4"
+  version: ${{ major_minor + ".73" }}
 
 package:
   name: lighttpd
-  version: {{ version }}
+  version: ${{ version }}
 
 source:
-  url: http://download.lighttpd.net/lighttpd/releases-{{ major_minor }}.x/lighttpd-{{ version }}.tar.gz
+  url: http://download.lighttpd.net/lighttpd/releases-${{ major_minor }}.x/lighttpd-${{ version }}.tar.gz
   sha256: 816cbec71e8d02d874f1d5c798d76d091a76d5acbeb6e017ba76aeb4263d6995
 
 build:
   number: 7
-  skip: True  # [not linux]
+  skip: not linux
 
 requirements:
   build:
     - pkg-config
     - libtool
     - perl  # Needed to run the tests
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
-    - {{ compiler('cxx') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
     - make
     - automake
     - autoconf
@@ -59,16 +62,16 @@ requirements:
     - zstd
     - libdeflate
 
-test:
-  files:
-    - lighttpd.conf
-  commands:
-    - lighttpd -h
-    - lighttpd -v
-    - lighttpd -t -f lighttpd.conf
+tests:
+  - files:
+      recipe:
+        - lighttpd.conf
+    script:
+      - lighttpd -h
+      - lighttpd -v
+      - lighttpd -t -f lighttpd.conf
 
 about:
-  home: http://www.lighttpd.net/
   license: BSD-3-Clause
   license_file: COPYING
   summary: Light, fast web server
@@ -78,11 +81,12 @@ about:
     memory footprint compared to other web-servers, effective management of
     the cpu-load, and an advanced feature set, lighttpd is the perfect
     solution for every server that is suffering load problems.
-  doc_url: http://redmine.lighttpd.net/projects/lighttpd/wiki
-  doc_source_url: http://redmine.lighttpd.net/projects/lighttpd/repository/revisions/master/show/doc
-  dev_url: https://github.com/lighttpd
+  homepage: http://www.lighttpd.net/
+  repository: https://github.com/lighttpd
+  documentation: http://redmine.lighttpd.net/projects/lighttpd/wiki
 
 extra:
   recipe-maintainers:
     - sdvillal
     - notestaff
+
