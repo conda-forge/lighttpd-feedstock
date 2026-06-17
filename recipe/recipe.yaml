@@ -34,6 +34,7 @@ requirements:
     - bzip2
     - pcre
     - pcre2
+    - fcgi2
     - krb5
     - openssl
     - libxml2-devel
