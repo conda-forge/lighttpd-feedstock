@@ -1,5 +1,7 @@
 brotli:
 - '1.2'
+brotli:
+- '1.2'
 bzip2:
 - '1'
 c_compiler:
