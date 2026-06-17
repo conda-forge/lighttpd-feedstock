@@ -39,7 +39,11 @@ make -j${CPU_COUNT}
 # See:
 #  https://redmine.lighttpd.net/projects/lighttpd/wiki/RunningUnitTests
 #  https://github.com/lighttpd/lighttpd1.4/tree/master/tests
-make -j${CPU_COUNT} check VERBOSE=1
+#
+# Skip ``make check`` when cross-compiling
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR:-}" != "" ]]; then
+  make -j${CPU_COUNT} check VERBOSE=1
+fi
 
 make install
 
