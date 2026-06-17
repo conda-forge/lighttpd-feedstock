@@ -1,4 +1,5 @@
->>>>>>> main/main
+# This file was generated automatically from conda-smithy. To update this configuration,
+# update the conda-forge.yml and/or the recipe/meta.yaml.
 # -*- mode: yaml -*-
 
 name: Build conda package
