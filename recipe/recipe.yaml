@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   major_minor: "1.4"
-  version: "1.4.84"
+  version: "1.4.85"
 
 package:
   name: lighttpd
@@ -10,7 +10,7 @@ package:
 
 source:
   url: http://download.lighttpd.net/lighttpd/releases-${{ major_minor }}.x/lighttpd-${{ version }}.tar.gz
-  sha256: ccf90ecef33b0fc36463d2f7a4af4dc87e0bb809d43acb4c0daba4b0672cf633
+  sha256: ffb2ab3e3b9e8b0dfadf9a8b2a5c86084afe5cc68ed3cf4d5776c8a7891c58e9
 
 build:
   number: 0
